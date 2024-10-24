@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="module_items" class="addmodule-subform">
+<field name="id" type="sql" multiple="true" size="10"
+				label="Modules"
+				description="SIDEPANEL_MODULE_SELECT_DESC"
+				query="SELECT id, module, position, title FROM #__modules WHERE published=1 AND client_id=0 ORDER BY title"
+				key_field="id" value_field="title">
+				<option value="">SIDEPANEL_MODULE_SELECTION</option>
+			</field>
+	</fieldset>
+</form>

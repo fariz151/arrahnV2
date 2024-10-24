@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="template" method="upgrade" group="template" client="site">
+	<name>himax</name>
+	<version>Joomla 4-5</version>
+	<creationDate>March, 2024</creationDate>
+	<author>JoomlaTema</author>
+	<authorEmail>admin@joomlatema.net</authorEmail>
+	<authorUrl>www.joomlatema.net</authorUrl>
+	<copyright>Copyright (C), JoomlaTema.net. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description></description>
+
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>error-t4.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateInfo.php</filename>
+		<folder>css</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>scss</folder>
+		<folder>params</folder>
+		<folder>local</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+	<position>content-top</position>
+	<position>content-bottom</position>
+    <position>coloredmodule</position>
+    <position>coloredmodule-2</position>
+    <position>coloredmodule-3</position>
+    <position>header-r</position>
+    <position>header-top-1</position>
+    <position>header-top-2</position>
+    <position>header-top-3</position>
+    <position>middlespot-1</position>
+    <position>middlespot-2</position>
+    <position>middlespot-3</position>
+    <position>middlespot-4</position>
+    <position>middlespot-5</position>
+    <position>nav-login</position>
+    <position>nav-search</position>
+    <position>spotlight-1</position>
+    <position>spotlight-2</position>
+    <position>slider</position>
+    <position>submain-0</position>
+    <position>submain-1</position>
+    <position>submain-2</position>
+    <position>submain-3</position>
+    <position>submain-4</position>
+    <position>submain-5</position>
+    <position>subslider-0</position>
+    <position>subslider-1</position>
+    <position>subslider-2</position>
+    <position>footerbase</position>
+    <position>copyright-l</position>
+    <position>copyright-r</position>
+    <position>suprafooter-l</position>
+    <position>suprafooter-r</position>
+    <position>navhelper</position>
+    <position>top-a</position>
+    <position>top-b</position>
+    <position>navhelper-2</position>
+		<position>off-canvas</position>
+		<position>search</position>
+		<position>banner</position>
+		<position>topbar</position>
+		<position>topbar-l</position>
+		<position>topbar-r</position>
+		<position>masthead</position>
+		<position>main-top-1</position>
+		<position>main-top-2</position>
+		<position>main-bottom-1</position>
+		<position>mega-1</position>
+		<position>mega-2</position>
+		<position>mega-3</position>
+		<position>mega-4</position>
+		<position>main-bottom-2</position>
+		<position>breadcrumbs</position>
+		<position>sidebar-l</position>
+		<position>sidebar-r</position>
+		<position>section-1</position>
+		<position>section-2</position>
+		<position>section-3</position>
+		<position>section-4</position>
+		<position>section-5</position>
+    <position>bottomspot-1</position>
+    <position>bottomspot-2</position>
+    <position>bottomspot-3</position>
+    <position>bottomspot-4</position>
+    <position>bottomspot-5</position>
+    <position>bottomspot-6</position>
+    <position>baseline</position>
+    <position>baseline-2</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>bottom-c</position>
+		<position>bottom-d</position>
+		<position>footnav-1</position>
+		<position>footnav-2</position>
+		<position>footnav-3</position>
+		<position>footnav-4</position>
+		<position>footnav-5</position>
+		<position>footer</position>
+		<position>footer-logo</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_himax.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_himax.sys.ini</language>
+	</languages>
+	<t4>
+		<basetheme>base</basetheme>
+		<bootstrap>bs5</bootstrap>
+	</t4>
+
+	<updateservers>
+    <server type="extension" priority="1" name="T4 Blank">http://update.joomlart.com/service/tracking/j31/tpl_himax.xml</server>
+	</updateservers>
+</extension>

@@ -1,0 +1,10 @@
+{
+    "host": "localhost",
+    "backup_date": "2024-08-26 10:12:15",
+    "akeeba_version": "9.9.5",
+    "php_version": "8.2.18",
+    "root": "C:\\wamp64\\www\\himax\\",
+    "custom_public": false,
+    "JPATH_ROOT": "C:\\wamp64\\www\\himax",
+    "JPATH_PUBLIC": "C:\\wamp64\\www\\himax"
+}

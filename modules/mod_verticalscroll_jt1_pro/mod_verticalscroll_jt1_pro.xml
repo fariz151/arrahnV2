@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	client="site"
+	method="upgrade">
+	<name>VerticalScroller JT Pro</name>
+	<author>JOOMLATEMA.NET</author>
+	<creationDate>Jan 07, 2013</creationDate>
+	<copyright>Copyright (C) 2008 - 2013 http://www.Joomlatema.Net All rights reserved.</copyright>
+	<license>GNU/GPL</license>	
+	<authorEmail>destek@joomlatema.net</authorEmail>
+	<authorUrl>www.Joomlatema.Net</authorUrl>
+	<version>2.3</version>
+	<description><![CDATA[
+	<h1>VerticalScroller JT Pro Module</h1> <h2 style='padding-left:10px;>Version 2.0</h2><p class='img-logo'><img src='../modules/mod_verticalscroll_jt1_pro/tmpl/images/logo.png' width='175' height='151' align='right'  />VerticalScroller JT Pro Module is a commercial extension developed by <a href='http://www.joomlatema.net' target='_blank' style='color: #146295'>Joomlatema.Net</a>. Module reads content articles from Joomla category and shows them at frontend as a Slider. All elements of the frontend interface could easily be changed at the backend.</p><p style='text-align:left';>
+<strong>Features:</strong>
+    <ul style='margin-left:15px;text-align:left;'>
+	<li>Support Joomla! 2.5.x - 3.x - 4.x and 5.x Native</li>
+   <li>Show your joomla content and news</li>
+   <li>Show K2 content and news</li>
+	<li>Ordering options: order by joomla articles ordering, by creation date, by modified date</li>
+	<li>Ability to use articles from joomla content categories multi-categories mode</li>
+	<li>Show little thumbnails at the bottom</li>
+	<li>Change little thumbnail's width, height and bacground color</li>
+	<li>Limit Description Text, Limit Title</li>
+	<li>Support content images with resize, link and float option (Left-Right-None)</li>
+	<li>Ability to show / hide and position Read More and change with your own readmore text</li>
+	<li>Show/Hide Fade effect</li>
+	<li>All front end elements easily customizable with CSS and backend settings</li>
+	<li>Click and Mouseover Event Type, Autorun Option</li>
+	<li>Ability to show / hide More in text and change with your own</li>
+	<li>Display Options like Background color, Title color, Introtext color, Readon color etc.</li>
+	
+</ul>
+.</p>	<strong>Developer:</strong></p><strong>VerticalScroller JT Pro</strong> is the commercial Module  developed by <a href='http://www.joomlatema.net' target='_blank' style='color: #146295'>Joomlatema.Net</a>. You can see all extensions developed by Joomlatema.Net at <a href='http://www.joomlatema.net' target='_blank' style='color: #146295'>here</a> .<p style='font-size: 11px; text-align: center;margin: 60px -10px 0; border-top: 1px solid #eee; padding: 6px 0'>Thanks for choosing us. <a href='http://www.joomlatema.net' target='_blank' style='color: #146295'>JOOMLATEMA.NET</a><br/><a target='_blank' href='http://www.joomlatema.net/forum.html'>Support Forum.</a>]]></description>
+	<files>
+		<filename module="mod_verticalscroll_jt1_pro">mod_verticalscroll_jt1_pro.php</filename>
+		<filename>index.html</filename>
+		<folder>classes/</folder>
+		<folder>admin</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>helpers/</folder>
+	</files>
+	<updateservers>
+        <server type="extension" priority="1" name="VerticalScroller JT Pro Updates">http://joomlatema.net/update_server/joomla3/verticalscroll_pro.xml</server>
+    </updateservers>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_verticalscroll_jt1_pro.ini</language>
+		<language tag="tr-TR">language/tr-TR.mod_verticalscroll_jt1_pro.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		 
+				</fieldset>	
+				<!--general_settings-->
+			<fieldset name="general_settings" label="GENERAL_SETTINGS">
+				<field name="modulewidth" type="text" default="auto" label="MODULE_WIDTH" description="MODULE_WIDTH_DESC" />
+				<field name="height" type="text" default="0" label="MOD_VERTICALSCROLL_HEIGHT" description="MOD_VERTICALSCROLL_HEIGHT_DESC" />
+				<field name="newsbg" default="#ffffff" label="MOD_VERTICALSCROLL_BG" type="text" description="MOD_VERTICALSCROLL_BG_DESC" />
+				<field name="padding" default="10px 10px 10px 10px" label="MODULE_PADDING" type="text" description="MODULE_PADDING_DESC" />
+				<field name="block_padding" default="10px 10px 10px 10px" label="ARTICLE_BLOCK_PADDING" type="text" description="ARTICLE_BLOCK_PADDING_DESC" />
+				<field name="newsPerPage" type="text" default="5" label="NEWS_PER_PAGE" description="NEWS_PER_PAGE_DESC" />
+				<field name="ShowNavigation" type="radio" class="btn-group btn-group-yesno" default="0" label="SHOW_NAVIGATION" description="SHOW_NAVIGATION_DESC">
+				<option value="1">JYes</option>
+				<option value="0">JNo</option>
+			</field>
+		<field name="NavigationType" type="list" showon="ShowNavigation:1" class="btn-group" default="arrow" label="NAVIGATION_TYPE" description="NAVIGATION_TYPE_DESC">
+				<option value="arrow">NAV_ARROW</option>
+				<option value="text">NAV_TEXT</option>
+				<option value="textandarrow">NAV_TEXT_ARROW</option>
+			</field>
+			<field name="navtop_position" type="text" showon="ShowNavigation:1" default="-40px" label="NAVTOP_POSITION" description="NAVTOP_POSITION_DESC" />
+			<field name="navright_position" type="text" showon="ShowNavigation:1" default="0px" label="NAVRIGHT_POSITION" description="NAVRIGHT_POSITION_DESC" />
+			
+		<field name="prev_text" type="text" showon="NavigationType:text,textandarrow" default="Previous" label="PREVIOUS_TEXT" description="PREVIOUS_TEXT_DESC" />
+		<field name="next_text" type="text" showon="NavigationType:text,textandarrow" default="Next" label="NEXT_TEXT" description="NEXT_TEXT_DESC" />
+				<field name="nexticon" type="list" showon="NavigationType:arrow,textandarrow" class="btn-group" default="fa-angle-up" label="NEXT_ICON" description="NEXT_ICON_DESC">
+				<option value="fa-angle-right">fa-angle-right</option>
+				<option value="fa-arrow-right">fa-arrow-right</option>
+				<option value="fa-caret-right">fa-caret-right</option>
+				<option value="fa-angle-double-right">fa-angle-double-right</option>
+				<option value="fa-chevron-right">fa-chevron-right</option>
+				<option value="fa-long-arrow-right">fa-long-arrow-right</option>
+				<option value="fa-forward">fa-forward</option>
+				<option value="fa-arrow-up">fa-arrow-up</option>
+				<option value="fa-chevron-up">fa-chevron-up</option>
+				<option value="fa-angle-up">fa-angle-up</option>
+				<option value="fa-long-arrow-up">fa-long-arrow-up</option>
+				<option value="fa-chevron-circle-up">fa-chevron-circle-up</option>
+				<option value="fa-angle-double-up">fa-angle-double-up</option>
+				<option value="fa-caret-up">fa-caret-up</option>
+				<option value="fa-arrow-circle-o-up">fa-arrow-circle-o-up</option>
+				<option value="fa-sort-asc">fa-sort-asc</option>
+			</field>
+		<field name="previcon" type="list" class="btn-group" default="fa-angle-down" showon="NavigationType:arrow,textandarrow" label="PREV_ICON" description="PREV_ICON_DESC">
+				<option value="fa-angle-left">fa-angle-left</option>
+				<option value="fa-arrow-left">fa-arrow-left</option>
+				<option value="fa-caret-left">fa-caret-left</option>
+				<option value="fa-angle-double-left">fa-angle-double-left</option>
+				<option value="fa-chevron-left">fa-chevron-left</option>
+				<option value="fa-long-arrow-left">fa-long-arrow-left</option>
+				<option value="fa-backward ">fa-backward </option>
+				<option value="fa-arrow-down">fa-arrow-down</option>
+				<option value="fa-chevron-down">fa-chevron-down</option>
+				<option value="fa-angle-down">fa-angle-down</option>
+				<option value="fa-long-arrow-down">fa-long-arrow-down</option>
+				<option value="fa-chevron-circle-down">fa-chevron-circle-down</option>
+				<option value="fa-angle-double-down">fa-angle-double-down</option>
+				<option value="fa-caret-down">fa-caret-down</option>
+				<option value="fa-arrow-circle-o-down">fa-arrow-circle-o-down</option>
+				<option value="fa-sort-desc">fa-sort-desc</option>
+			</field>
+			<field name="ShowPause" type="radio" class="btn-group btn-group-yesno" default="0" label="SHOW_PAUSE" description="SHOW_PAUSE_DESC">
+				<option value="1">JYes</option>
+				<option value="0">JNo</option>
+			</field>
+			<field name="autoplay" type="radio" class="btn-group btn-group-yesno" default="true" label="AUTORUN_DESC" description="AUTORUN_DESC_DESC">
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+			</field>
+			<field name="AutoplayInterval" type="text" default="3000" label="DELAY_TIME" description="DELAY_TIME_DESC" />
+			<field name="pauseOnHover" type="radio" class="btn-group btn-group-yesno" default="true" label="PAUSE_ON_HOVER" description="PAUSE_ON_HOVER_DESC">
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+			</field>
+			<field name="animate" type="radio" class="btn-group btn-group-yesno" default="true" label="ANIMATE_ON_CHANGE" description="ANIMATE_ON_CHANGE_DESC">
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+			</field>
+	
+<field name="animationSpeed"  type="text"  default="500" label="MOD_VERTICALSCROLL_SPEED" description="MOD_VERTICALSCROLL_SPEED_DESC" />
+			<field name="startPaused" type="radio" class="btn-group btn-group-yesno" default="false" label="START_PAUSED" description="START_PAUSED_DESC">
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+			</field>
+			 <field name="replacer" type="text" default="..." label="REPLACER" description="REPLACER_DESC" />
+				</fieldset>
+				<!--source_setting-->
+					<fieldset name="source_settings" label="SOURCE_SETTINGS">
+					<field name="source" type="list" default="category" label="SOURCE_FROM" class="jt_control"
+					description="SOURCE_FROM_DESC">
+					<option value="category">CATEGORY</option>
+					<option value="article_ids">ARTICLES_IDS</option>
+					<option value="joomla_tags">JOOMLA_TAGS</option>
+					<option value="k2_category">K2_CATEGORY</option>
+					<option value="k2_article_ids">K2_ARTICLES_IDS</option>
+					<option value="k2_tags">K2_TAGS</option>
+				</field>
+				<field name="article_ids" type="text" default="" label="ARTICLES_IDS" class="source_article_ids"
+					description="ARTICLES_IDS_DESC" />
+				<field name="k2_article_ids" type="text" default="" class="source_k2_article_ids"
+					label="K2_ARTICLES_IDS" description="K2_ARTICLES_IDS_DESC" />
+				<field name="category" show_root="true" type="category" class="source_category"
+					extension="com_content" multiple="true" size="10" label="CONTENT_CATEGORY"
+					description="CONTENT_CATEGORY_DESC" />
+				<field name="k2_category" type="k2multicategories" class="source_k2_category"
+					default="" size="10" multiple="multiple" label="K2_CATEGORIES"
+					description="K2CATEGORIES_DESC" />
+				<field name="joomla_tags" type="joomlatags" class="source_joomla_tags"  default="" multiple="true" mode="nested" label="JOOMLA_TAGS" description="JOOMLA_TAGS_DESC"/>
+				<field name="k2_tags" type="k2tags" class="source_k2_tags" default="" multiple="true" label="K2_TAGS" description="K2_TAGS" />	   
+				<field name="sub_categories" type="radio" class="source_category source_k2_category source_btportfolio_category source_easyblog_category btn-group btn-group-yesno" default="0" label="SUB_CATEGORIES" description="SUB_CATEGORIES_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="exclude_categories" type="text" class="source_category source_k2_category source_btportfolio_category source_easyblog_category " label="EXCLUDE_CATEGORIES" description="EXCLUDE_CATEGORIES_DESC"/>
+				<field name="limit_items" type="text" default="12" label="LIMIT_ITEMS"
+					description="LIMIT_ITEMS_DESC" />
+				<field name="limit_items_for_each" type="radio" class="btn-group btn-group-yesno" default="0" label="LIMIT_ITEMS_FOR_EACH" description="LIMIT_ITEMS_FOR_EACH_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				<field name="user_id" type="list" default="0" label="USER_FILTER"
+					description="USER_FILTER_DESC">
+					<option value="0">USER_ANYONE</option>
+					<option value="by_me">USER_ADDED_BY_ME</option>
+					<option value="not_me">USER_NOTADDED_BY_ME</option>
+				</field>
+				<field name="show_featured" type="list" default="1"
+					label="SHOW_FEATURED" description="SHOW_FEATURED_DESC">
+					<option value="1">JSHOW</option>
+					<option value="2">JHIDE</option>
+					<option value="3">ONLY_SHOW_FEATURED</option>
+				</field>
+				<field name="ordering" type="list" default="created-asc"
+					label="ARTCILES_SORTED_BY" description="ARTCILES_SORTED_BY_DESC">
+					<option value="id-asc">ID_ASCENDING</option>
+					<option value="id-desc">ID_DESCENDING</option>
+					<option value="title-asc">TITLE_ASCENDING</option>
+					<option value="title-desc">TITLE_DESCENDING</option>
+					<option value="ordering-asc">ORDERING_ASCENDING</option>
+					<option value="ordering-desc">ORDERING_DESCENDING</option>
+					<option value="hits-asc">HIT_ASCENDING</option>
+					<option value="hits-desc">HIT_DESCENDING</option>
+					<option value="created-asc">DATE_ASCENDING</option>
+					<option value="created-desc">DATE_DESCENDING</option>
+					<option value="publish_up-asc">PUBLISHED_DATE_ASCENDING</option>
+					<option value="publish_up-desc">PUBLISHED_DATE_DESCENDING</option>
+					<option value="featured-">FEATURED_ORDERING</option>
+					<option value="rand-">RANDOM</option>
+				</field>
+				</fieldset>
+						<!--Layout settings-->
+				<fieldset name="layout_settings" label="LAYOUT_SETTINGS">
+				<field type="spacer" name="title_option" label="TITLE_OPTION" />
+				<field name="show_title" type="radio" class="btn-group btn-group-yesno"  default="1" label="TITLE_SHOW" description="TITLE_SHOW_DESC">
+				<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="limit_title_by" type="radio" class="btn-group" showon="show_title:1" default="word" label="MOD_VERTICALSCROLL_TITLE_LIMIT_TYPE"  description="MOD_VERTICALSCROLL_TITLE_LIMIT_TYPE_DESC">
+				<option value="word">LIMIT_WORD</option>
+					<option value="char">LIMIT_CHARACTER</option>
+				</field>
+				<field name="title_max_chars" default="5" showon="show_title:1" label="MOD_VERTICALSCROLL_TITLE_LIMIT" type="text" description="MOD_VERTICALSCROLL_TITLE_LIMIT_DESC" />
+				<field type="spacer" name="intro_text_option" label="INTRO_TEXT_OPTION" />
+				<field name="show_intro" type="radio" class="btn-group btn-group-yesno"  default="1" label="INTRO_SHOW" description="INTRO_SHOW_DESC">
+				<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="limit_description_by" type="radio" class="btn-group" showon="show_intro:1"  default="char" label="LIMIT_INTRO_TYPE"  description="LIMIT_INTRO_TYPE_DESC">
+				<option value="word">LIMIT_WORD</option>
+					<option value="char">LIMIT_CHARACTER</option>
+				</field>
+				<field name="description_max_chars" type="text" default="100" showon="show_intro:1" label="INTROTEXT_LENGTH" description="INTROTEXT_LENGTH_DESC" />
+					<field name="show_category_name" type="radio" default="0"
+					class="btn-group btn-group-yesno" label="SHOW_CATEGORY_NAME" description="SHOW_CATEGORY_NAME_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_category_name_as_link" type="radio" default="0"
+					class="btn-group btn-group-yesno"  label="SHOW_CATEGORY_NAME_AS_LINK" description="SHOW_CATEGORY_NAME_AS_LINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+					<field name="show_date" type="radio" default="0" class="btn-group btn-group-yesno"
+					label="SHOW_DATE" description="SHOW_DATE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="date_format" type="text" showon="show_date:1" default="d M Y" class="btn-group"
+					label="DATE_FORMAT" description="DATE_FORMAT_DESC"/>
+				<field name="show_author" type="radio" default="0" class="btn-group btn-group-yesno"
+					label="SHOW_AUTHOR" description="SHOW_AUTHOR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="auto_strip_tags" type="radio"
+					default="1" label="STRIP_TAGS" description="STRIP_TAGS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="allow_tags" type="list" showon="auto_strip_tags:0" default="" multiple="multiple"
+					label="ALLOW_TAGS" description="ALLOW_TAGS_DESC">
+					<option value="a">OPTION_LINK</option>
+					<option value="img">OPTION_IMAGE</option>
+					<option value="b">OPTION_BOLD</option>
+					<option value="i">OPTION_ITALIC</option>
+					<option value="font">OPTION_FONT</option>
+					<option value="br">OPTION_NEWLINE</option>			
+				</field>
+				<field name="open_target" type="list" default="_parent"
+					label="CLICK_LINK_OPEN_IN" description="CLICK_LINK_OPEN_IN_DESC">
+					<option value="_blank">OPTION_NEW_WINDOW</option>
+					<option value="_parent">OPTION_PARENT_WINDOW</option>	
+				</field>
+				<!--readmore_option-->
+				<field type="spacer" name="readmore_option" label="READMORE_OPTION" />
+				<field name="show_readmore" type="radio" class="btn-group btn-group-yesno"  default="1" label="READON_SHOW" description="READON_SHOW_DESC">
+				<option value="1">READON_YES</option>
+					<option value="0">READON_NO</option>
+				</field>
+				<field name="readon_text" default="Details" label="READON_TEXT" type="text" showon="show_readmore:1" description="READON_TEXT_DESC" />
+				<field name="readonposition" type="radio" class="btn-group" default="right" showon="show_readmore:1" label="READON_POSITION" description="READON_POSITION_DESC">
+				<option value="right">READON_POS_RIGHT</option>
+					<option value="left">READON_POS_LEFT</option>
+				</field>					
+				<field type="spacer" name="image_option" label="IMAGE_OPTION" />
+				<field name="show_image" type="radio" default="1" class="btn-group btn-group-yesno"
+					label="SHOW_IMAGE" description="SHOW_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="checkimg_fulltext" type="radio" default="0" class="btn-group btn-group-yesno"
+					label="CHECKIMG_FULLTEXT" description="CHECKIMG_FULLTEXT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="check_image_exist" type="radio" default="0" class="btn-group btn-group-yesno"
+					label="CHECK_IMAGE_EXIST" description="CHECK_IMAGE_EXIST_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="image_align" class="jt_control" type="list" default="left" label="IMAGE_FLOAT"
+					description="IMAGE_FLOAT_DESC">
+				<option value="left">FLOAT_LEFT</option>
+				<option value="right">FLOAT_RIGHT</option>
+				<option value="none">FLOAT_NONE</option>
+				</field>
+				<field name="imagemargin" type="text" default="0px 10px 0px 0px " label="IMAGE_MARGIN" description="IMAGE_MARGIN_DESC" />
+				<field name="image_thumb" type="radio" default="1" class="btn-group btn-group-yesno"
+					label="IMAGE_THUMB" description="IMAGE_THUMB_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="thumbnail_width" type="text" default="100"
+					label="THUMBS_WIDTH" description="THUMBS_WIDTH_DESC" />
+				<field name="thumbnail_height" type="text" default="70"
+					label="THUMBS_HEIGHT" description="THUMBS_HEIGHT_DESC" />
+					<field name="default_thumb" type="radio" default="1" class="btn-group btn-group-yesno"
+					label="DEFAULT_THUMB" description="DEFAULT_THUMB_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="hovereffect" type="list" default="zoomin" class="btn-group"
+					label="IMAGE_THUMB_EFFECT" description="IMAGE_THUMB_EFFECT_DESC">
+					<option value=" ">JNONE</option>
+					<option value="opacity">OPACITY_EFFECT</option>
+					<option value="zoomin">ZOOMIN_EFFECT</option>
+					<option value="zoomout">ZOOMOUT_EFFECT</option>
+				</field>				
+				<field name="use_introimg" type="radio" default="1" class="btn-group btn-group-yesno"
+					label="USE_INTROIMG" description="USE_INTROIMG_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="use_caption" type="radio" default="0" class="btn-group btn-group-yesno"
+					label="USE_CAPTION" description="USE_CAPTION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="use_linka" type="radio" default="0" class="btn-group btn-group-yesno"
+					label="USE_LINKA" description="USE_LINKA_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				 <field name="showall" type="radio" class="btn-group btn-group-yesno" default="1" label="SHOW_MOREIN_LINK" description="SHOW_MOREIN_LINK_DESC">
+				<option value="1">MOREIN_SHOW</option>
+				<option value="0">MOREIN_HIDE</option>
+			</field>
+			<field name="show_all_text" type="text" default="More In : " showon="showall:1" label="MOREIN_TEXT" description="MOREIN_TEXT_DESC" />
+				</fieldset>		
+			<fieldset name="advanced">
+			
+		<field name="moduleclass_sfx" type="text" default="" label="MODULE_CLASS_SUFFIX" description="MODULE_CLASS_SUFFIX_DESC" />
+			<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					class="custom-select"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					<field name="content_plugin" type="radio" default="0" class="btn-group btn-group-yesno"
+					label="CONTENT_PLUGIN" description="CONTENT_PLUGIN_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="CACHE_TIME" description="CACHE_TIME_DESC" />
+				<field addfieldpath="/modules/mod_verticalscroll_jt1_pro/admin/formfield" type="asset" name="asset" path="modules/mod_verticalscroll_jt1_pro/admin/" />
+				</fieldset>
+		</fields>
+	</config>
+</extension>

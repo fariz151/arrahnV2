@@ -1,0 +1,189 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/* Start Common Styles */
+html {
+	height: 100%;
+	margin-bottom: 1px;
+}
+
+body.error-page {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	margin-bottom: 1px;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+	margin-top: 0px;
+	
+}
+.error.arcmed{position:relative;background-color:#111;background-image:url(../images/error-bg.jpg); background-repeat:no-repeat; background-position:center top; background-size:cover;background-attachment: fixed; padding:10px}
+.error.arcmed::after{ content:""; position:absolute; width:100%; height:100%; /*background:rgba(0,0,0,0.75);*/ top:0; left:0; z-index:-1}
+.error {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table, td, th, div, pre, blockquote, ul, ol, dl, address,.componentheading,.contentheading,.contentpagetitle,.sectiontableheader,.newsfeedheading {
+	font-family: helvetica, arial, sans-serif;
+	font-weight: normal;
+}
+
+#outline {
+    margin: 0 auto;
+	padding-bottom:100px;
+	padding-top:0px;
+    width: 65%;
+	/*clip-path: polygon(0% 0, 85% 0, 100% 100%, 15% 100%);*/
+}
+
+.errorboxoutline.arcmed{width:100%; background:rgba(0,0,0,0.5);border-radius:5px; margin-top:50px; padding-bottom:100px;}
+
+h1 {
+    color: #C21500;
+	font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin:0px 0 34px;
+    text-align: center;
+	padding-top:30px;
+    text-transform: uppercase;
+	font-weight:600;
+	transform-origin: bottom left;
+}
+#errorboxoutline {
+	width: 900px;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #000000;
+}
+#errorboxheader {/*
+	width: 900px;
+	margin: 0px;
+	padding: 0px;
+	background: #E44249;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 22px;
+	text-align: center;
+	border-bottom: 1px solid #000000;*/
+}
+ #errorboxheader h2 {
+ font-family: "Roboto", sans-serif;
+    color: #e12454;
+    font-size: 200px;
+    margin-top: 0px;
+	text-align:center;
+	font-weight:600;
+	margin-bottom:0px;
+	letter-spacing:1px;
+	transform-origin: bottom left;
+	line-height:1;
+	padding-top:20px;
+}
+.error-explain-inner{ width:50%; margin:0 auto; color:#fff;margin-bottom: 30px;font-size:18px;font-weight: 600}
+.error-explain,.error-explain ol,.error-explain ol li,.error-explain ol li a,.error-explain p{ }
+.sub-errorinfo {
+    color: #010f1c;
+    font-size: 25px;
+}
+h2.error-title {
+	font-size: 64px;
+	 font-family: "Roboto", sans-serif;
+	margin-bottom: 14px;
+	text-align:center;
+	color: #fff;
+	margin-top:30px
+}
+.as-btn {
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	vertical-align: middle;
+	display: inline-block;
+	border: none;
+	text-transform: uppercase;
+	text-align: center;
+	background-color:#e12454;
+	color: #fff;
+	font-size: 14px;
+	font-weight:500;
+	line-height: 1;
+	padding:10px 25px 10px 25px;
+	border-radius:3px;
+	-webkit-transition: background-color 0.25s linear, color 0.4s ease-in-out;
+	transition: background-color 0.25s linear, color 0.4s ease-in-out;
+	 font-family: "Roboto", sans-serif;
+	text-decoration:none;
+}
+.as-btn::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	background-color:#010f1c;
+	z-index: -1;
+	-webkit-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	border-radius: inherit;
+}
+.as-btn i{ margin-right:15px; font-size:18px;}
+.as-btn:hover::before, .as-btn.active::before {
+	width: 100%;
+}
+.as-btn:hover, .as-btn.active {
+	color:#fff;
+	background-color:#010f1c;
+}
+ul.gotohome{margin:30px 0; padding-left:0;display:flex; justify-content: flex-start;gap: 30px;width:100%; flex-wrap:wrap;}
+ul.gotohome li{ list-style:none;display: inline;}
+p.sub-errortext  {
+    color:#010f1c;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 23px;
+	text-align:center;
+}
+#errorboxbody {
+	margin:0px 0 0 0px;
+	padding: 10px;
+	text-align: left;
+}
+#techinfo {
+	margin: 10px;
+	padding: 10px;
+	text-align: left;
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+}
+#techinfo p {
+	color: #CCCCCC;
+}
+@media screen and (max-width:990px){
+.error-explain-inner{ width:80%;}
+}
+@media only screen and (max-width: 700px) {
+* {
+	font-size: 12px;
+}
+h1 {font-size: 20px;letter-spacing: 1px;margin:0px 0 17px;}
+#errorboxheader h2 {font-size:100px;}
+.error-explain-inner {width:90%;}
+a.as-btn { display:block; margin-bottom:20px;}
+ol{ padding-left:10px;}
+}
+@media screen and (max-width:767px){
+#outline {width:85%;}
+ul.gotohome li{ }
+a.as-btn{ margin-bottom:20px;display:inline-block; margin-right:10px;}
+#outline {padding-bottom: 0;}
+ul.gotohome{width:100%;}
+}
+@media screen and (min-width: 768px) and (max-width:1100px){
+a.as-btn{ margin:20px 0;display:block;}
+}
